@@ -1,0 +1,37 @@
+####################### START OF SQL SCRIPT ######################
+#                                                                #                                          
+# DAY # : 37                                                     #                                  
+#                                                                #
+# THIS SCRIPT IS USED FOR LIBRARY MANAGEMENT WHICH CONSISTS OF   #
+# THE DETAILS ABOUT THE INCHARGE OF LIBRARY,THE ADMIN WHO        #
+# PROVIDES ACCESS TO THE USER AND ABOUT THE USER'S REGULAR       #
+# STATUS.                                                        #
+#                                                                #
+# AUTHOR : DHARINI SHREE K                                       #                                                          
+#                                                                #
+######################## END OF SQL SCRIPT #######################
+
+/*CREATING A DATABASE LIBRARY MANAGEMENT TO HOLD THE DETAILS RELATED TO LIBRARY.*/
+
+create database LibraryManagement;
+
+/*CREATING A TABLE WHICH HOLDS THE USER'S LOGIN CREDENTIALS 
+AND ABOUT THE NUMBER OF BOOKS READ,BORROWED & RETURNED.*/
+
+create table User(
+userName varchar(30) PRIMARY KEY,
+passWord varchar(30) NOT NULL,
+booksRead int,
+noOfBooksBorrowed int,
+noOfBooksReturned int,
+isActive boolean NOT NULL
+);
+
+/*CREATING A TABLE WHICH HOLDS THE DETAILS ABOUT THE INCHARGE AND ADMIN OF LIBRARY.*/
+
+create table Role(
+user varchar(30) NOT NULL,
+librarian varchar(30) NOT NULL,
+subStaff varchar(30) NOT NULL,
+admin varchar(30) NOT NULL
+);
